@@ -3,7 +3,10 @@
 import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 
-const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
+const API =
+  process.env.NEXT_PUBLIC_BACKEND_URL ??
+  process.env.NEXT_PUBLIC_API_URL ??
+  'http://localhost:4000';
 
 const MOODS = [
   { score: 1, emoji: '😭', label: '최악' },
